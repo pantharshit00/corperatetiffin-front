@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
 
-export default class Index extends Component {
+export default class Login extends Component {
   render() {
     return (
       <Layout>
-        <Hero />
-        <p>This is a page</p>
+        <p>Login works!</p>
       </Layout>
     );
   }
