@@ -1,16 +1,28 @@
+import Head from 'next/head';
 import React from 'react';
+import Proptypes from 'prop-types';
 import Appbar from '../Appbar';
 
-export class DefaultLayout extends React.Component {
+export default class DefaultLayout extends React.Component {
   render() {
     return (
       <div>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway"
+            rel="stylesheet"
+          />
+        </Head>
         <Appbar />
         {this.props.children}
-        <style jsx global>
-          {`
+        {/* prettier-ignore */}
+        <style jsx global>{`
+          html{
+            font-size: 20px;
+          }
             body {
               margin: 0;
+              font-family: 'Raleway', sans-serif;
             }
           `}
         </style>
@@ -18,3 +30,7 @@ export class DefaultLayout extends React.Component {
     );
   }
 }
+
+DefaultLayout.propTypes = {
+  children: Proptypes.element.isRequired,
+};

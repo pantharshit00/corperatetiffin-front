@@ -4,12 +4,10 @@ export default class Hero extends Component {
   render() {
     return (
       <div className="hero-container">
-        <div className="hero-text hero-text__large">CorperateTiffin'</div>
-        <div className="hero-text hero-text__small">
-          The Best Way to get Lunch
-        </div>
-        <style jsx>
-          {`
+        <div className="hero-text hero-text__large">CorperateTiffin{'\''}</div>
+        <div className="hero-text hero-text__small">The best way to get Lunch</div>
+        {/* prettier-ignore */}
+        <style jsx>{` 
             .hero-container {
               display: flex;
               align-items: center;
@@ -18,19 +16,23 @@ export default class Hero extends Component {
               margin-bottom: 3rem;
               padding-top: 5rem;
               padding-bottom: 5rem;
-              background-color: red;
+              background-color: #c0392b;
               flex-direction: column;
             }
             .hero-text {
-              color: white
-              font-family: 'Roboto Mono for Powerline';
+              color: white;
             }
-            .hero-text__large{
-              font-size: 5rem;              
+            .hero-text__large {
+              font-size: 4rem;
+              font-family: 'Indie Flower', sans-serif;
+              transition: all 0.4s ease-out;
+              cursor:cell;
             }
-            .hero-text__small{
-              font-size: 2rem;
-              font-family: sans-serif;
+            .hero-text__large:hover {
+              font-size: 6rem;
+            }
+            .hero-text__small {
+              font-size: 1.5rem;
             }
           `}
         </style>

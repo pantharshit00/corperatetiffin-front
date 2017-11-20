@@ -15,7 +15,6 @@ export default class Appbar extends Component {
           {`
             a {
               text-decoration: none;
-              font-family: sans-serif;
               padding: 0.5rem;
             }
           `}
