@@ -11,11 +11,18 @@ export default class Appbar extends Component {
         <Link href="/login">
           <a>Login</a>
         </Link>
-        <style jsx>
-          {`
+        {/* prettier-ignore */}
+        <style jsx>{`
             a {
               text-decoration: none;
               padding: 0.5rem;
+              color:white
+            }
+            div {
+              padding: 1rem 0.3rem 1rem 0.3rem; 
+              position:fixed;
+              top:0;
+              min-width: 100%;
             }
           `}
         </style>

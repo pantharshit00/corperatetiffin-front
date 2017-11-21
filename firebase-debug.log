@@ -1,0 +1,16 @@
+[debug] [2017-11-21T11:54:42.115Z] ----------------------------------------------------------------------
+[debug] [2017-11-21T11:54:42.117Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-11-21T11:54:42.117Z] CLI Version:   3.15.2
+[debug] [2017-11-21T11:54:42.118Z] Platform:      linux
+[debug] [2017-11-21T11:54:42.118Z] Node Version:  v9.1.0
+[debug] [2017-11-21T11:54:42.118Z] Time:          Tue Nov 21 2017 17:24:42 GMT+0530 (IST)
+[debug] [2017-11-21T11:54:42.118Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-21T11:54:42.133Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-21T11:54:42.133Z] > authorizing via signed-in user
+[debug] [2017-11-21T11:54:42.135Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/corperate-tiffin  
+ Tue Nov 21 2017 17:24:42 GMT+0530 (IST)
+[debug] [2017-11-21T11:54:45.475Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:54:45.476Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/corperate-tiffin/tokens  
+ Tue Nov 21 2017 17:24:45 GMT+0530 (IST)
+[debug] [2017-11-21T11:54:47.450Z] <<< HTTP RESPONSE 200

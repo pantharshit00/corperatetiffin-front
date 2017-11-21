@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Appbar from '../Appbar';
 
 export default class DefaultLayout extends React.Component {
@@ -8,6 +8,7 @@ export default class DefaultLayout extends React.Component {
     return (
       <div>
         <Head>
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link
             href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway"
             rel="stylesheet"
@@ -32,5 +33,5 @@ export default class DefaultLayout extends React.Component {
 }
 
 DefaultLayout.propTypes = {
-  children: Proptypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
 };

@@ -8,6 +8,20 @@ export default class Index extends Component {
       <Layout>
         <Hero />
         <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
+        <p>This is a page</p>
       </Layout>
     );
   }
