@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 
 export default class Hero extends Component {
-  state = {
-    heroActive: false,
-  };
-  enlargeText = () => {
+  constructor() {
+    super();
+    this.state = {
+      heroActive: false,
+    };
+    this.enlargeText = this.enlargeText.bind(this);
+    this.shrinkText = this.shrinkText.bind(this);
+  }
+  enlargeText() {
     this.setState({
       heroActive: true,
     });
-  };
+  }
 
-  shrinkText = () => {
+  shrinkText() {
     this.setState({
       heroActive: false,
     });
-  };
+  }
   render() {
     return (
       <div
