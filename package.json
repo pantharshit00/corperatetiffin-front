@@ -2,6 +2,7 @@
   "name": "app",
   "description": "Next.js React SSR App",
   "license": "MIT",
+  "version": "1.0.0",
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.1",
     "apollo-client": "^2.0.3",
@@ -17,10 +18,10 @@
     "react-dom": "^16.1.1"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "dev": "next",
     "build": "NODE_ENV=production next build",
-    "start": "next start",
-    "run:prod": "next"
+    "start": "next start"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
@@ -28,6 +29,16 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --semi",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
