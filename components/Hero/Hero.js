@@ -35,7 +35,6 @@ export default class Hero extends Component {
           CorperateTiffin{"'"}
         </div>
         <div className="hero-text hero-text__small">The best way to get Lunch</div>
-        {/* prettier-ignore */}
         <style jsx>{` 
             .hero-container {
               display: flex;

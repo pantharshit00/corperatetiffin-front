@@ -5,6 +5,10 @@ import Appbar from '../Appbar';
 
 export default class DefaultLayout extends React.Component {
   render() {
+    let marginFix = '';
+    if (this.props.margin) {
+      marginFix += 'margin__top';
+    }
     return (
       <div>
         <Head>
@@ -14,16 +18,27 @@ export default class DefaultLayout extends React.Component {
             rel="stylesheet"
           />
         </Head>
-        <Appbar />
-        {this.props.children}
-        {/* prettier-ignore */}
-        <style jsx global>{`
-          html{
-            font-size: 20px;
-          }
+        <Appbar
+          margin={this.props.margin}
+          background={this.props.appbarColor || 'background:transparent'}
+        />
+        <div className={marginFix}>{this.props.children}</div>
+        <style jsx global>
+          {`
+            html {
+              font-size: 20px;
+            }
             body {
               margin: 0;
+              padding: 0;
               font-family: 'Raleway', sans-serif;
+            }
+          `}
+        </style>
+        <style jsx>
+          {`
+            .margin__top {
+              margin-top: 3rem;
             }
           `}
         </style>
