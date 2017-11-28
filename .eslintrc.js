@@ -7,5 +7,9 @@ module.exports = {
     'react/prop-types': 0,
     'jsx-a11y/label-has-for': 0
   },
-  parser: 'babel-eslint'
+  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    node: true
+  }
 };

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
+import Router from 'next/router';
 import LoginMutation from '../lib/query/login';
+import { setTokensToLocalStorage } from '../lib/AuthService';
 import { Input, InputSubmit } from '../components/Input';
 import withData from '../lib/withData';
 import Layout from '../components/Layout';
@@ -23,7 +25,12 @@ class Login extends Component {
         password,
       },
     });
-    console.log(response);
+    const { ok } = response.data.loginUser;
+    if (ok) {
+      const { token, refreshToken } = response.data.loginUser;
+      setTokensToLocalStorage(token, refreshToken);
+      Router.push('/');
+    }
   };
 
   render() {
