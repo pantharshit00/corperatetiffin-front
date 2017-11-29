@@ -1,9 +1,20 @@
 import Head from 'next/head';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Appbar from '../Appbar';
+import Appbar, { ParallaxAppbar } from '../Appbar';
+// import { isLoggedIn, getUserInfoFromToken } from '../../lib/AuthService';
 
 export default class DefaultLayout extends React.Component {
+  // state = {
+  //   user: null,
+  // };
+  // componentDidMount() {
+  //   if (isLoggedIn()) {
+  //     this.setState({
+  //       user: getUserInfoFromToken().user,
+  //     });
+  //   }
+  // }
   render() {
     let marginFix = '';
     if (this.props.margin) {
@@ -18,10 +29,14 @@ export default class DefaultLayout extends React.Component {
             rel="stylesheet"
           />
         </Head>
-        <Appbar
-          margin={this.props.margin}
-          background={this.props.appbarColor || 'background:transparent'}
-        />
+        {this.props.parallax ? (
+          <ParallaxAppbar margin={this.props.margin} />
+        ) : (
+          <Appbar
+            margin={this.props.margin}
+            background={this.props.appbarColor || 'background:transparent'}
+          />
+        )}
         <div className={marginFix}>{this.props.children}</div>
         <style jsx global>
           {`
@@ -32,6 +47,11 @@ export default class DefaultLayout extends React.Component {
               margin: 0;
               padding: 0;
               font-family: 'Raleway', sans-serif;
+            }
+            @media all and (max-width: 560px) {
+              html {
+                font-size: 12px;
+              }
             }
           `}
         </style>

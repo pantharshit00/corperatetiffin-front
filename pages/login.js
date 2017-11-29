@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 import Router from 'next/router';
 import LoginMutation from '../lib/query/login';
-import { setTokensToLocalStorage } from '../lib/AuthService';
+import { setTokensToLocalStorage, isLoggedIn } from '../lib/AuthService';
 import { Input, InputSubmit } from '../components/Input';
 import withData from '../lib/withData';
 import Layout from '../components/Layout';
@@ -10,6 +10,11 @@ import Flex from '../components/FlexUtils';
 import Card from '../components/Card';
 
 class Login extends Component {
+  componentDidMount() {
+    if (isLoggedIn()) {
+      Router.push('/');
+    }
+  }
   handleInputChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,

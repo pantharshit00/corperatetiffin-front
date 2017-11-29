@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 export default class Index extends Component {
   render() {
     return (
-      <Layout>
+      <Layout parallax>
         <Hero />
         <p>This is a page</p>
         <p>This is a page</p>

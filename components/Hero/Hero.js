@@ -28,14 +28,17 @@ export default class Hero extends Component {
         onMouseLeave={this.shrinkText}
       >
         <div
-          className={`hero-text hero-text__large ${this.state.heroActive
-            ? 'hero-text__large--active'
-            : ''}`}
+          className={`hero-text hero-text__large ${
+            this.state.heroActive ? 'hero-text__large--active' : ''
+          }`}
         >
           CorperateTiffin{"'"}
         </div>
-        <div className="hero-text hero-text__small">The best way to get Lunch</div>
-        <style jsx>{` 
+        <div className="hero-text hero-text__small">
+          The best way to get Lunch
+        </div>
+        <style jsx>
+          {`
             .hero-container {
               display: flex;
               align-items: center;
@@ -51,17 +54,27 @@ export default class Hero extends Component {
             }
             .hero-text {
               color: white;
-              background: rgba(0,0,0,0.225);
+              background: rgba(0, 0, 0, 0.225);
               margin-top: 0.2rem;
             }
             .hero-text__large {
               font-size: 4rem;
               font-family: 'Indie Flower', sans-serif;
               transition: all 0.4s ease-out;
-              cursor:cell;
+              cursor: cell;
             }
             .hero-text__large--active {
               font-size: 6rem;
+            }
+            @media all and (max-width: 800px) {
+              .hero-text__large--active {
+                font-size: 4rem;
+              }
+            }
+            @media all and (max-width: 332px) {
+              .hero-text__large {
+                font-size: 3rem;
+              }
             }
             .hero-text__small {
               font-size: 1.5rem;
