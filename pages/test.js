@@ -6,7 +6,12 @@ import withData from '../lib/withData';
 
 class Test extends Component {
   render() {
-    return <Layout>{this.props.data.getFoodItems.map(item => <p>{item.name}</p>)}</Layout>;
+    return (
+      <Layout>
+        {this.props.data.getFoodItems &&
+          this.props.data.getFoodItems.map(item => <p>{item.name}</p>)}
+      </Layout>
+    );
   }
 }
 
@@ -15,7 +20,7 @@ export default compose(
   graphql(searchFoodByName, {
     options: {
       variables: {
-        name: 'ki',
+        name: 'ke',
       },
     },
   }),
