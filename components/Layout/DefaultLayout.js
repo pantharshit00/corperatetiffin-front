@@ -47,6 +47,7 @@ export default class DefaultLayout extends React.Component {
               margin: 0;
               padding: 0;
               font-family: 'Raleway', sans-serif;
+              overflow-x: hidden;
             }
             @media all and (max-width: 560px) {
               html {

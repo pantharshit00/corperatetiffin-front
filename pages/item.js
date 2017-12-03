@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
+import Error from 'next/error';
 import Layout from '../components/Layout';
 import withData from '../lib/withData';
 import { getFoodById } from '../lib/query/food';
+import FoodItem from '../components/FoodItem';
 
 class Item extends Component {
   static getInitialProps = ({ query }) => ({ query: query.id });
@@ -12,11 +14,15 @@ class Item extends Component {
     background: -webkit-linear-gradient(to right, #dc2430, #7b4397); 
     background: linear-gradient(to right, #dc2430, #7b4397); 
     `;
-    const { data: { getFoodItemById } } = this.props;
+    const { data: { getFoodItemById, error } } = this.props;
+    if (error || !getFoodItemById) {
+      // eslint-disable-next-line no-console
+      console.error(error);
+      return <Error statusCode={404} />;
+    }
     return (
       <Layout margin appbarColor={appbarColor}>
-        <h1>{this.props.query}</h1>
-        <pre>{JSON.stringify(getFoodItemById, null, 2)}</pre>
+        <FoodItem item={getFoodItemById} />
       </Layout>
     );
   }

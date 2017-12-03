@@ -9,7 +9,9 @@ class Test extends Component {
     return (
       <Layout>
         {this.props.data.getFoodItems &&
-          this.props.data.getFoodItems.map(item => <p>{item.name}</p>)}
+          this.props.data.getFoodItems.map(item => (
+            <p key={`${item.name}-${item.price}`}>{item.name}</p>
+          ))}
       </Layout>
     );
   }

@@ -33,6 +33,8 @@ export default class ParallaxAppbar extends Component {
               text-decoration: none;
               padding: 0.5rem;
               color: white;
+              font-weight: bold;
+              font-size: 1.25rem;
             }
             div {
               animation-duration: 1s;
@@ -42,6 +44,7 @@ export default class ParallaxAppbar extends Component {
               top: 0;
               min-width: 100%;
               background: transparent;
+              z-index: 4;
             }
             .changeBg {
               background: #7b4397;
