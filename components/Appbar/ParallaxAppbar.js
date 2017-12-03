@@ -27,6 +27,7 @@ export default class ParallaxAppbar extends Component {
         <Link prefetch href="/login">
           <a>Login</a>
         </Link>
+        <a className="title">CorperateTiffin</a>
         <style jsx>
           {`
             a {
@@ -52,6 +53,9 @@ export default class ParallaxAppbar extends Component {
               background: linear-gradient(to right, #dc2430, #7b4397);
               position: fixed;
               top: 0;
+            }
+            .changeBg > .title {
+              display: block;
             }
             @keyframes slideInDown {
               from {
@@ -92,6 +96,15 @@ export default class ParallaxAppbar extends Component {
             .lightSpeedIn {
               animation-name: lightSpeedIn;
               animation-timing-function: ease-out;
+            }
+            .title {
+              display: none;
+              text-align: center;
+              font-family: Indie Flower, sans-serif;
+              position: absolute;
+              top: -2%;
+              left: 41%;
+              font-size: 2rem;
             }
           `}
         </style>
