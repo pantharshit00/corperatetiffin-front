@@ -14,6 +14,7 @@ export default ({ text, flex, block }) => (
           font-family: Raleway, sans-serif;
           padding: 1rem;
           width: 100%;
+          border-radius: 3rem;
         }
         div {
           ${block ? 'margin: 0.5rem 1rem 0.5rem 1rem' : 'margin: 0.5rem'};
