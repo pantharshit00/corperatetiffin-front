@@ -41,6 +41,9 @@ export const InputSubmit = ({ value }) => (
           padding: 0.5rem;
           border-radius: 1rem;
           width: 100%;
+          font-family: 'panama bold', sans-serif;
+          font-size: 0.8rem;
+          letter-spacing: 0.25rem;
         }
       `}
     </style>

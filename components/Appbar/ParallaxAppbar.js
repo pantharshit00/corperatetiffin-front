@@ -35,7 +35,8 @@ export default class ParallaxAppbar extends Component {
               padding: 0.5rem;
               color: white;
               font-weight: bold;
-              font-size: 1.25rem;
+              font-size: 1rem;
+              font-family: 'panama', sans-serif;
             }
             div {
               animation-duration: 1s;

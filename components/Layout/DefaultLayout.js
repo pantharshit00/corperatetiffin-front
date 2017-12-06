@@ -54,6 +54,28 @@ export default class DefaultLayout extends React.Component {
                 font-size: 12px;
               }
             }
+            @font-face {
+              font-family: 'panama bold';
+              src: url('/static/fonts/panama-bold-webfont.woff2')
+                  format('woff2'),
+                url('/static/fonts/panama-bold-webfont.woff') format('woff');
+              font-weight: normal;
+              font-style: normal;
+            }
+            @font-face {
+              font-family: 'panama';
+              src: url('/static/fonts/panama-light.otf') format('opentype');
+              font-weight: normal;
+              font-style: normal;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              font-family: 'panama', sans-serif;
+            }
           `}
         </style>
         <style jsx>

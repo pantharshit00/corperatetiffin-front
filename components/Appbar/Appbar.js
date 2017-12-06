@@ -18,7 +18,8 @@ export default class Appbar extends Component {
               text-decoration: none;
               padding: 0.5rem;
               color: white;
-              font-size: 1.25rem;
+              font-size: 1rem;
+              font-family: 'panama', sans-serif;
             }
             div {
               padding: 1rem 0.3rem 1rem 0.3rem;
