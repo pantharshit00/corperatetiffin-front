@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from '../components/Layout';
+import Layout, { CardGrid } from '../components/Layout';
 import Hero from '../components/Hero';
 
 export default class Index extends Component {
@@ -7,21 +7,16 @@ export default class Index extends Component {
     return (
       <Layout parallax>
         <Hero />
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
-        <p>This is a page</p>
+        <h1 className="center">Hot items</h1>
+        <CardGrid />
+        <style jsx>
+          {`
+            .center {
+              text-align: center;
+              font-family: Indie flower, sans-serif;
+            }
+          `}
+        </style>
       </Layout>
     );
   }

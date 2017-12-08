@@ -1,14 +1,19 @@
 import React from 'react';
 
-export default ({ title, children }) => (
-  <div className="card">
-    <div className="card__title">
-      <h2>{title}</h2>
-    </div>
+export default ({
+  title, children, css, flexRes,
+}) => (
+  <div className={`card ${flexRes ? 'card__res' : ''}`}>
+    {title && (
+      <div className="card__title">
+        <h2>{title}</h2>
+      </div>
+    )}
     <div className="card__body">{children}</div>
     <style jsx>
       {`
         .card {
+          ${css || ''};
           display: flex;
           flex-direction: column;
           padding: 2px 0 2px 0;
@@ -31,6 +36,25 @@ export default ({ title, children }) => (
         .card__title > h2 {
           margin: 0.5rem;
           text-align: center;
+        }
+        .card__res {
+          max-width: 23%;
+          margin: 0.4rem;
+        }
+        @media all and (max-width: 990px) {
+          .card__res {
+            max-width: 31%;
+          }
+        }
+        @media all and (max-width: 724px) {
+          .card__res {
+            max-width: 47%;
+          }
+        }
+        @media all and (max-width: 560px) {
+          .card__res {
+            max-width: %;
+          }
         }
       `}
     </style>

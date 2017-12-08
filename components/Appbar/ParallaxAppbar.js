@@ -46,7 +46,7 @@ export default class ParallaxAppbar extends Component {
               top: 0;
               min-width: 100%;
               background: transparent;
-              z-index: 4;
+              z-index: 1000;
             }
             .changeBg {
               background: #7b4397;
