@@ -15,10 +15,13 @@ class Item extends Component {
     background: linear-gradient(to right, #dc2430, #7b4397); 
     `;
     const { data: { getFoodItemById, error } } = this.props;
-    if (error || !getFoodItemById) {
+    if (error) {
       // eslint-disable-next-line no-console
       console.error(error);
       return <Error statusCode={404} />;
+    }
+    if (!getFoodItemById) {
+      return null;
     }
     return (
       <Layout margin appbarColor={appbarColor}>

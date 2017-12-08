@@ -2,16 +2,19 @@ import React from 'react';
 import ItemDisplayCard from '../ItemDisplayCard';
 import Flex from '../FlexUtils';
 
-export default () => (
+export default ({ data }) => (
   <Flex wrap>
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
-    <ItemDisplayCard />
+    {data &&
+      data.map(({
+ name, price, image, _id,
+}) => (
+  <ItemDisplayCard
+    thumb={image[0]}
+    id={_id}
+    name={name}
+    price={price}
+    key={_id}
+  />
+      ))}
   </Flex>
 );

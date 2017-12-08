@@ -1,13 +1,21 @@
 import React from 'react';
+import Link from 'next/link';
 import Card from '../Card';
 import { PillButton } from '../Button';
 
-export default () => (
+export default ({
+  name, thumb, price, id,
+}) => (
   <Card flexRes>
-    <h3>Aloo ki sabzi</h3>
-    <img src="http://localhost:8080/static/img/aloo.jpg" alt="aloo" />
+    <Link href={`/item?id=${id}`} as={`/item/${id}`} prefetch>
+      <div className="anchor">
+        <h3>{name}</h3>
+        <img src={`http://192.168.43.128:8080${thumb}`} alt="aloo" />
+      </div>
+    </Link>
+    {/* prettier-ignore */}
     <div className="section__pricing">
-      <span>&#8377;40</span> <span className="discount">&#8377;50</span>
+      <span>&#8377;{price}</span> <span className="discount">&#8377;{parseInt((125 * price) / 100, 10)}</span>
     </div>
     <PillButton text="Buy now" />
     <PillButton text="Add to Cart" />
@@ -36,6 +44,9 @@ export default () => (
           margin-left: 0.5rem;
           font-size: 2rem;
           font-family: 'panama', sans-serif;
+        }
+        .anchor {
+          cursor: pointer;
         }
       `}
     </style>
