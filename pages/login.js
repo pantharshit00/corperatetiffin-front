@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 import Router from 'next/router';
-import LoginMutation from '../lib/query/login';
+import { LoginMutation } from '../lib/query/auth';
 import { setTokensToLocalStorage, isLoggedIn } from '../lib/AuthService';
 import { Input, InputSubmit } from '../components/Input';
 import withData from '../lib/withData';

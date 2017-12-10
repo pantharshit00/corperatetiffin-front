@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Flex = ({ children, center, wrap }) => {
+const Flex = ({
+  children, center, wrap, dir,
+}) => {
   let classes = 'flex';
   if (center) {
     classes += ' flex__center';
@@ -15,9 +17,10 @@ const Flex = ({ children, center, wrap }) => {
         {`
           .flex {
             display: flex;
+            ${dir ? `flex-direction: ${dir}` : ''};
           }
           .flex__center {
-            height: 90vh;
+            min-height: 90vh;
             justify-content: center;
             align-items: center;
           }

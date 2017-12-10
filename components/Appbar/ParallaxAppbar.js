@@ -31,6 +31,9 @@ export default class ParallaxAppbar extends Component {
           <Link prefetch href="/login">
             <a>Login</a>
           </Link>
+          <Link prefetch href="/register">
+            <a>Register</a>
+          </Link>
         </div>
         <div className="nav__section--one">
           <Link prefetch href="/">
@@ -38,6 +41,9 @@ export default class ParallaxAppbar extends Component {
           </Link>
           <Link prefetch href="/login">
             <a>Login</a>
+          </Link>
+          <Link prefetch href="/register">
+            <a>Register</a>
           </Link>
         </div>
         <div className="nav__section--two">

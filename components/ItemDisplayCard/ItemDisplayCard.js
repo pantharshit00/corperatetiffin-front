@@ -10,7 +10,7 @@ export default ({
     <Link href={`/item?id=${id}`} as={`/item/${id}`} prefetch>
       <div className="anchor">
         <h3>{name}</h3>
-        <img src={`http://192.168.43.128:8080${thumb}`} alt="aloo" />
+        <img src={`http://localhost:8080${thumb}`} alt="aloo" />
       </div>
     </Link>
     {/* prettier-ignore */}

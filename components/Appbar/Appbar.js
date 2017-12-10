@@ -13,6 +13,9 @@ export default class Appbar extends Component {
           <Link prefetch href="/login">
             <a>Login</a>
           </Link>
+          <Link prefetch href="/register">
+            <a>Register</a>
+          </Link>
         </div>
         <div className="nav__section--two">
           <a className="title">CorperateTiffin</a>

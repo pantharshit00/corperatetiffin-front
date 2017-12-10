@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Input = ({
-  onChange, type, name, placeholder,
+  onChange, type, name, placeholder, ...rest
 }) => (
   <div>
     <input
@@ -10,9 +10,13 @@ export const Input = ({
       type={type}
       name={name}
       placeholder={placeholder}
+      {...rest}
     />
     <style jsx>
       {`
+        div {
+          padding: 0 1.7rem 0 0;
+        }
         .form__input {
           font-family: Raleway, sans-serif;
           font-size: 0.9rem;
@@ -20,6 +24,7 @@ export const Input = ({
           padding: 0.4rem 0.7rem 0.4rem 0.7rem;
           border-radius: 0.2rem;
           margin-bottom: 1rem;
+          width: 100%;
         }
       `}
     </style>
