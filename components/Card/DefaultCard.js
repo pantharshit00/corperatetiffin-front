@@ -51,9 +51,9 @@ export default ({
             max-width: 47%;
           }
         }
-        @media all and (max-width: 560px) {
+        @media all and (max-width: 324px) {
           .card__res {
-            max-width: %;
+            max-width: 100%;
           }
         }
       `}

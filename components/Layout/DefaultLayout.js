@@ -4,6 +4,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import PropTypes from 'prop-types';
 import Appbar, { ParallaxAppbar } from '../Appbar';
+import Footer from '../Footer';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
@@ -43,6 +44,7 @@ export default class DefaultLayout extends React.Component {
           />
         )}
         <div className={marginFix}>{this.props.children}</div>
+        <Footer />
         <style jsx global>
           {`
             html {
@@ -112,6 +114,11 @@ export default class DefaultLayout extends React.Component {
               -webkit-transform: rotate(3deg) translate(0px, -4px);
               -ms-transform: rotate(3deg) translate(0px, -4px);
               transform: rotate(3deg) translate(0px, -4px);
+            }
+            svg.icon {
+              cursor: pointer;
+              height: 2.5rem;
+              width: 2.5rem;
             }
           `}
         </style>
