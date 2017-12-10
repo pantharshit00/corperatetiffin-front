@@ -1,8 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
+import NProgress from 'nprogress';
+import Router from 'next/router';
 import PropTypes from 'prop-types';
 import Appbar, { ParallaxAppbar } from '../Appbar';
-// import { isLoggedIn, getUserInfoFromToken } from '../../lib/AuthService';
+
+Router.onRouteChangeStart = () => NProgress.start();
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 export default class DefaultLayout extends React.Component {
   // state = {
@@ -75,6 +80,38 @@ export default class DefaultLayout extends React.Component {
             h5,
             h6 {
               font-family: 'panama', sans-serif;
+            }
+
+            /* Make clicks pass-through */
+            #nprogress {
+              pointer-events: none;
+            }
+
+            #nprogress .bar {
+              background: teal;
+
+              position: fixed;
+              z-index: 1031;
+              top: 0;
+              left: 0;
+
+              width: 100%;
+              height: 3.5px;
+            }
+
+            /* Fancy blur effect */
+            #nprogress .peg {
+              display: block;
+              position: absolute;
+              right: 0px;
+              width: 100px;
+              height: 100%;
+              box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+              opacity: 1;
+
+              -webkit-transform: rotate(3deg) translate(0px, -4px);
+              -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
             }
           `}
         </style>
