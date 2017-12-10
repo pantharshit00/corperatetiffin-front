@@ -24,7 +24,15 @@ class Item extends Component {
       return null;
     }
     return (
-      <Layout margin appbarColor={appbarColor}>
+      <Layout
+        title={
+          getFoodItemById
+            ? `${getFoodItemById.name} | CorperateTiffin`
+            : 'Loading.. | CorperateTiffin'
+        }
+        margin
+        appbarColor={appbarColor}
+      >
         <FoodItem item={getFoodItemById} />
       </Layout>
     );

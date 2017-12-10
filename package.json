@@ -26,7 +26,7 @@
     "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "NODE_ENV=production next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",

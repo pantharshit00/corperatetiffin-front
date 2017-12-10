@@ -9,7 +9,7 @@ class Index extends Component {
   render() {
     const { data: { getHotFoodItems } } = this.props;
     return (
-      <Layout parallax>
+      <Layout title="Home | CorperateTiffin" parallax>
         <Hero />
         <h1 className="center">Hot items</h1>
         <CardGrid data={getHotFoodItems} />

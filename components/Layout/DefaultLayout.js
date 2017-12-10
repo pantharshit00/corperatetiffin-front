@@ -34,6 +34,7 @@ export default class DefaultLayout extends React.Component {
             href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway"
             rel="stylesheet"
           />
+          <title>{this.props.title || 'CorperateTiffin'}</title>
         </Head>
         {this.props.parallax ? (
           <ParallaxAppbar margin={this.props.margin} />

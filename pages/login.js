@@ -45,7 +45,7 @@ class Login extends Component {
     background: linear-gradient(to right, #dc2430, #7b4397); 
     `;
     return (
-      <Layout margin appbarColor={appbarColor}>
+      <Layout title="Login | CorperateTiffin" margin appbarColor={appbarColor}>
         <Flex center>
           <Card title="Login">
             <form onSubmit={this.handleFormSubmit} className="form">
