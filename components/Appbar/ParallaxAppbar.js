@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import { ShoppingCart } from '../Icons';
+import { ShoppingCart, Avatar } from '../Icons';
 
 export default class ParallaxAppbar extends Component {
   componentDidMount() {
@@ -44,6 +44,7 @@ export default class ParallaxAppbar extends Component {
           <a className="title">CorperateTiffin</a>
         </div>
         <div className="nav__section--three">
+          <Avatar style={{ marginRight: '0.8rem' }} />
           <ShoppingCart />
         </div>
         <style jsx>

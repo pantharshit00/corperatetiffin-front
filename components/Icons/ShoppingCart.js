@@ -6,8 +6,8 @@ export default () => (
     viewBox="0 0 100 100"
     aria-labelledby="shopicon"
     role="presentation"
-    width="30"
-    height="30"
+    width="40"
+    height="40"
   >
     <title>Shopping Cart</title>
     <path
