@@ -1,8 +1,42 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 import { ShoppingCart, Avatar, SearchIcon } from '../Icons';
+import SearchBar from './SearchBar';
 
-export default class ParallaxAppbar extends Component {
+export default class Appbar extends Component {
+  state = {
+    search: false,
+  };
+  componentDidMount() {
+    Router.onRouteChangeStart = () => {
+      this.setState({
+        search: false,
+      });
+    };
+  }
+
+  toggleSearch = () => {
+    this.setState(state => ({
+      search: !state.search,
+    }));
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        {this.state.search ? (
+          <SearchBar />
+        ) : (
+          <ParallaxAppbar toggleSearch={this.toggleSearch} {...this.props} />
+        )}
+      </React.Fragment>
+    );
+  }
+}
+
+// eslint-disable-next-line
+class ParallaxAppbar extends Component {
   componentDidMount() {
     const nav = document.querySelector('#parallaxNav');
     function toggleNavBg() {
@@ -52,7 +86,10 @@ export default class ParallaxAppbar extends Component {
         <div className="nav__section--three">
           <Avatar style={{ marginRight: '0.8rem' }} />
           <ShoppingCart style={{ marginRight: '0.8rem' }} />
-          <SearchIcon style={{ height: '2rem', width: '2rem' }} />
+          <SearchIcon
+            onClick={this.props.toggleSearch}
+            style={{ height: '2rem', width: '2rem' }}
+          />
         </div>
         <style jsx>
           {`

@@ -1,3 +1,4 @@
 import { Input, InputSubmit } from './DefaultInput';
+import AutoComplete from './AutoComplete';
 
-export { Input, InputSubmit };
+export { Input, InputSubmit, AutoComplete };
