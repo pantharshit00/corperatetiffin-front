@@ -1,4 +1,5 @@
 import React from 'react';
+import debounce from 'lodash.debounce';
 import Downshift from 'downshift';
 import { Input } from './index';
 
@@ -11,7 +12,7 @@ export default function BasicAutocomplete({
   return (
     <Downshift
       onSelect={onChange}
-      onInputValueChange={fetchMore}
+      onInputValueChange={debounce(fetchMore, 500)}
       itemToString={i => (!i ? '' : i)}
       render={({
         getInputProps,
@@ -25,7 +26,7 @@ export default function BasicAutocomplete({
             autoFocus
             style={{ marginBottom: 0 }}
             {...getInputProps({
-              placeholder: 'Search for your favourite food',
+              placeholder: 'Search for your favourite food...',
             })}
           />
           {isOpen ? (
