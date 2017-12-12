@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import NProgress from 'nprogress';
 import Router from 'next/router';
 import { ShoppingCart, Avatar, SearchIcon } from '../Icons';
 import SearchBar from './SearchBar';
@@ -10,6 +11,7 @@ export default class Appbar extends Component {
   };
   componentDidMount() {
     Router.onRouteChangeStart = () => {
+      NProgress.start();
       this.setState({
         search: false,
       });
