@@ -60,6 +60,14 @@ app.prepare().then(() => {
     renderAndCache(req, res, '/login');
   });
 
+  server.get('/register', (req, res) => {
+    renderAndCache(req, res, '/register');
+  });
+
+  server.get('/store', (req, res) => {
+    renderAndCache(req, res, '/store');
+  });
+
   server.get('/item/:id', (req, res) => {
     const queryParams = { id: req.params.id };
     renderAndCache(req, res, '/item', queryParams);

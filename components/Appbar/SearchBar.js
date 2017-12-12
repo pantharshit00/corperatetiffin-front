@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import React, { Component } from 'react';
 import { withApollo } from 'react-apollo';
 import Router from 'next/router';

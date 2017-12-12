@@ -25,7 +25,7 @@ export default ({
           </div>
           {/* eslint-disable react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: description }} />
-          <div className="section section__btn">
+          <div className="section">
             <Button block text="Buy Now" flex={1} />
             <Button block text="Add To Cart" flex={1} />
           </div>
