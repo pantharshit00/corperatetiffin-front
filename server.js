@@ -65,7 +65,7 @@ app.prepare().then(() => {
   });
 
   server.get('/store', (req, res) => {
-    renderAndCache(req, res, '/store');
+    renderAndCache(req, res, '/store', req.query);
   });
 
   server.get('/item/:id', (req, res) => {
