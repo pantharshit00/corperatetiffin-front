@@ -2,7 +2,7 @@
   "name": "app",
   "description": "Next.js React SSR App",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.1",
     "apollo-client": "^2.0.3",
