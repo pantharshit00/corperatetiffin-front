@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "description": "Next.js React SSR App",
+  "description": "A graphql next app",
   "license": "MIT",
   "version": "1.1.0",
   "dependencies": {
